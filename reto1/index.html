@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Reto Grid 1</title>
+
+        <style>
+                .container{
+                      display: grid;
+
+                      grid-template:  repeat(7, 1fr) / repeat(7, 1fr); 
+                      grid-gap: 5px;
+                }
+
+                .item{
+                    background: brown;
+                    padding: 30px;
+                    color: #fff;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    border-radius: 5px;
+                }
+
+                .header{
+                    grid-column: 1 / 7;
+
+                }
+                .aside{
+                   grid-row: 1 / 7;
+                   grid-column: 7;   
+                }
+
+                .contenido1{
+                   grid-row: 2 / 6;
+                   grid-column: 1 / 7; 
+                }
+                .contenido2{
+                   grid-row-start: 6;
+                   grid-column: 1 / 7;
+                }
+                .footer{
+                    grid-row-start: 7;
+                    grid-column: 1 / -1;
+                }
+                
+        </style>
+
+</head>
+<body>
+            <div class="container">
+                <div class="item header">Header</div>
+                <div class="item contenido1">contenido 1</div>
+                <div class="item contenido2">contenido 2</div>
+                <div class="item aside">Aside</div>
+                <div class="item footer">Footer</div>
+            </div>
+</body>
+</html>
