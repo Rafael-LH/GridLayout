@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+        <style>
+
+            .container{
+                 display: grid;
+
+                 grid-template:  repeat(2, 1fr) / repeat(7, 1fr);
+                  grid-gap: 5px;  
+            }
+            .sub-container{
+                display: grid;
+                grid-template: repeat(2, 1fr) / repeat(2, 1fr);  
+                grid-gap: 5px; 
+            }
+
+            .item{
+                padding: 50px;
+                border-radius: 10px;
+                background: pink;
+
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            .item-sub{
+                background: brown;
+                padding: 40px;
+                border-radius: 10px;
+
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                color: #fff;
+            }
+           
+            .item:nth-child(1){
+                    grid-column: 1 / -1;
+            }
+            .item:nth-child(2){
+                grid-column: 1 / 4;
+            }
+            .item:nth-child(3){
+                    grid-column: 4 / 6;
+            }
+            .sub-container:nth-child(4){
+                    grid-column: 6 / 8;
+
+            }
+            .item-sub:nth-child(1){
+                    grid-column: 1 / -1;
+            }
+            .item-sub:nth-child(2){
+                    grid-column: 1 / 2;
+            }
+            .item-sub:nth-child(3){
+                    grid-column: 2 / 3;
+            }
+          
+            
+        </style>
+
+</head>
+<body>
+
+    <div class="container">
+        <div class="item">item 1</div>
+        <div class="item">item 2</div>
+        <div class="item">item 3</div>
+        <div class="sub-container">
+            <div class="item-sub">item 4</div>
+            <div class="item-sub">item 5</div>
+            <div class="item-sub">item 6</div>
+        </div>
+    </div>
+</body>
+</html>
